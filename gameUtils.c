@@ -112,7 +112,7 @@ Status getStatus(Move **board) {
     int i, j;
     for(i=0; i<3; i++) {
       for(j=0; j<3; j++) {
-        if(board[i][j] != O || board[i][j] != X) {		//changed to check for not equal to X of O
+        if(board[i][j] != O && board[i][j] != X) {		//changed to check for not equal to X of O
           s = PLAYING;
         }
       }
