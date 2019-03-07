@@ -52,7 +52,7 @@ void printBoard(Move **board) {
       }
     }
     printf("\n");
-    if(i<3) {
+    if(i<2) {										//removed extra line of tic tac toe board
       printf("  ------+-------+------\n");
     }
   }
@@ -82,7 +82,7 @@ Status getStatus(Move **board) {
   Status s = TIE;
 
   if( //rows
-      (board[0][1] == board[0][1] && board[0][1] == board[0][1] && board[0][0] == X) ||
+      (board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][0] == X) ||		//fixed for first row win cheching
       (board[1][0] == board[1][1] && board[1][1] == board[1][2] && board[1][0] == X) ||
       (board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][0] == X) ||
       //cols
@@ -112,7 +112,7 @@ Status getStatus(Move **board) {
     int i, j;
     for(i=0; i<3; i++) {
       for(j=0; j<3; j++) {
-        if(board[i][j] == O || board[i][j] == X) {
+        if(board[i][j] != O || board[i][j] != X) {		//changed to check for not equal to X of O
           s = PLAYING;
         }
       }
