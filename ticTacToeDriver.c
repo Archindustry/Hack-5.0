@@ -1,3 +1,10 @@
+/*
+*   Hack 5.0
+*
+*   Collaborators: Brent Lucke, John Hosch, Tristan Ragland, Kyle Hancock
+*
+*
+*/
 #include<stdlib.h>
 #include<stdio.h>
 #include<time.h>
