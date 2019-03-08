@@ -20,7 +20,7 @@ Move ** copyBoard(Move **board) {
       copy[i][j] = board[i][j];
     }
   }
-  return board;
+  return copy;                                                                  //fixed returning copy of original, originally returned board that had be messed with
 }
 
 Move ** newBoard() {
